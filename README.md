@@ -1,3 +1,15 @@
-# wic_website
+# Women in Computing @ Oswego website! 
 
-Site: https://wicoswego.netlify.app/
+Link: https://wicoswego.netlify.app/
+
+
+## Sections available: 
+Header
+Mission
+Activities 
+Events 
+Officers
+Footer
+
+## Instructions: 
+[git pull] 
