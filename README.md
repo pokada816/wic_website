@@ -4,7 +4,7 @@ Link: https://wicoswego.netlify.app/
 
 
 ## Sections available: 
-Header
+Header </br>
 Mission
 Activities 
 Events 
