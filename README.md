@@ -1,7 +1,6 @@
-# Women in Computing @ Oswego website! 
+# Women in Computing at Oswego! 
 
 Link: https://wicoswego.netlify.app/
-
 
 ## Sections available: 
 Header </br>
