@@ -26,6 +26,6 @@ git pull
 ```
 git status
 git add .
-git commit -m "_my message_"
+git commit -m "my commit message"
 git push
 ```
