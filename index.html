@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,14 +13,76 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <title>WiC Website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	* {box-sizing: border-box;}
+	body {font-family: Verdana, sans-serif;}
+	.mySlides {display: none;}
+	img {vertical-align: middle;}
+
+	/* Slideshow container */
+	.slideshow-container {
+	  max-width: 1000px;
+  		position: relative;
+ 	 margin: auto;
+	}
+
+	/* Caption text */
+	.text {
+  		color: #f2f2f2;
+  		font-size: 15px;
+  		padding: 8px 12px;
+  		position: absolute;
+  		bottom: 8px;
+  		width: 100%;
+  		text-align: center;
+	     }
+
+	/* Number text (1/3 etc) */
+	.numbertext {
+ 	 color: #f2f2f2;
+ 	 font-size: 12px;
+ 	 padding: 8px 12px;
+ 	 position: absolute;
+  	top: 0;
+	}	
+
+	/* The dots/bullets/indicators */
+	.dot {
+ 	 height: 15px;
+ 	 width: 15px;
+  	margin: 0 2px;
+  	background-color: #bbb;
+ 	 border-radius: 50%;
+  	display: inline-block;
+  	transition: background-color 0.6s ease;
+	}
+
+	.active {
+  	background-color: #717171;
+	}
+
+	/* Fading animation */
+	.fade {
+  	animation-name: fade;
+  	animation-duration: 2s;
+	}
+
+	@keyframes fade {
+  	from {opacity: .4} 
+  	to {opacity: 1}
+	}
+
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+  	.text {font-size: 11px}
+	}
+	</style>
 </head>
-
 <body>
-
     <!-- HEADER START -->
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
 
+<<<<<<< HEAD
         <div class="mySlides fade-in">
             <img src="img1.jpg" style="height:500px">
         </div>
@@ -33,41 +94,62 @@
         <div class="mySlides fade-in">
             <img src="img3.jpg" style="height:500px">
         </div>
+=======
+<div class="slideshow-container">
 
-    </div>
-    <br>
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img1.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
 
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+</div>
+<br>
 
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
-    </script>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+>>>>>>> b2232ff6b0ec46d4af8a95cdf92ab7e3811036d9
+
+
 
     <!-- HEADER END -->
 
@@ -108,118 +190,115 @@
 
 
     <!-- OFFICERS END -->
+    
+  <!-- FOOTER STARTS -->
+  <footer class="page-footer font-small indigo">
 
-    <!-- FOOTER STARTS -->
-    <footer class="page-footer font-small indigo">
-
-        <!-- Footer Links -->
-        <div class="container">
-
-            <!-- Grid row-->
-            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="#mission"> Mission </a>
-                    </h6>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="#!">Activities </a>
-                    </h6>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="#!"> Events</a>
-                    </h6>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="#!"> Officers</a>
-                    </h6>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="#!"> Contact</a>
-                    </h6>
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row-->
-            <hr class="rgba-white-light" style="margin: 0 15%;">
-
-            <!-- Grid row-->
-            <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-
-                <!-- Grid column -->
-                <div class="col-md-8 col-12 mt-5">
-                    <p style="line-height: 1.7rem">
-
-                        Women in Computing at Oswego is an organization that promotes the advancement of women in
-                        various technology fields. WiC is a member of the women's chapter of an international
-                        organization for computing, the Association for Computing Machinery (ACM-W).
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row-->
-            <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
-
-            <!-- Grid row-->
-            <div class="row pb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-12">
-
-                    <div class="mb-5 flex-center">
-
-                        <!--Linkedin -->
-                        <a class="li-ic social-icons" href="">
-                            <i class="fab fa-linkedin-in fa-4x white-text mr-5"> </i>
-                        </a>
-                        <!--Instagram-->
-                        <a class="ins-ic social-icons" href="https://www.instagram.com/wicoswego/" target="_blank">
-                            <i class="fab fa-instagram fa-4x white-text mr-5"> </i>
-                        </a>
-                        <!-- Mail -->
-                        <a class="social-icons" href="mailto:kchan2@oswego.edu">
-                            <i class="far fa-envelope fa-4x white-text"> </i>
-                        </a>
-
-                    </div>
-
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row-->
-
+    <!-- Footer Links -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#mission"> Mission </a>
+          </h6>
         </div>
-        <!-- Footer Links -->
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2022 Copyright:
-            <a href="https://mdbootstrap.com/"> Women in Computing at Oswego </a>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">Activities </a>
+          </h6>
         </div>
-        <!-- Copyright -->
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!"> Events</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!"> Officers</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!"> Contact</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+      <hr class="rgba-white-light" style="margin: 0 15%;">
+  
+      <!-- Grid row-->
+      <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+  
+        <!-- Grid column -->
+        <div class="col-md-8 col-12 mt-5">
+          <p style="line-height: 1.7rem"> 
 
-    </footer>
+            Women in Computing at Oswego is an organization that promotes the advancement of women in various technology fields. WiC is a member of the women's chapter of an international organization for computing, the Association for Computing Machinery (ACM-W).
+         </p>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+      <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+  
+      <!-- Grid row-->
+      <div class="row pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-12">
+  
+          <div class="mb-5 flex-center">
+
+            <!--Linkedin -->
+            <a class="li-ic social-icons" href="">
+              <i class="fab fa-linkedin-in fa-4x white-text mr-5"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic social-icons" href="https://www.instagram.com/wicoswego/" target="_blank">
+              <i class="fab fa-instagram fa-4x white-text mr-5"> </i>
+            </a>
+             <!-- Mail -->
+             <a class="social-icons" href = "mailto:kchan2@oswego.edu"> 
+                <i class="far fa-envelope fa-4x white-text"> </i>
+             </a>
+
+          </div>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="https://mdbootstrap.com/"> Women in Computing at Oswego </a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
     <!-- FOOTER ENDS -->
 </body>
-
 </html>
