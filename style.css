@@ -88,5 +88,22 @@ body {
 .joinButtonContainer {
   text-align: center;
   border: none;
-  height: 80px;
+  height: 100px;
+}
+
+.mission {
+  text-align: center;
+}
+
+.line {
+  margin: auto;
+  width:150px;
+  height:8px;
+  background-color: #3f51b5;
+}
+
+.missionText {
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
 }
