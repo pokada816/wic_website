@@ -15,6 +15,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- Customized CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>WiC Website</title>
 
     <!-- these are just some links to CSS frameworks / design stuff -->
@@ -30,21 +32,87 @@
 
 
 </head>
+
 <body>
     <!-- HEADER START -->
 
+    <div class="slideshow-container">
 
+        <div class="mySlides fade">
+            <img src="img1.jpg" class="headerImg">
+        </div>
 
+        <div class="mySlides fade">
+            <img src="img2.jpg" class="headerImg">
+        </div>
 
+        <div class="mySlides fade">
+            <img src="img3.jpg" class="headerImg">
+        </div>
 
+    </div>
+
+    <div style="text-align:center; margin-top: 6px">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slideIndex = n;
+            slides[slideIndex - 1].style.display = "flex";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "flex";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <div class="joinButtonContainer">
+        <form action="https://lakerlife.oswego.edu/organization/wco" method="get" target="_blank">
+            <button class="joinButton">Join Us!</button>
+        </form>
+    </div>
 
     <!-- HEADER END -->
 
     <!-- MISSION START -->
 
-
-
-
+    <div class="mission">
+        <h1>Mission</h1>
+        <div class="line"></div>
+        <div class="missionText">To support, celebrate, and advocate for the full engagement of women in all aspects of the computing field</div>
+    </div>
 
     <!-- MISSION END -->
 
@@ -208,51 +276,16 @@
             Women in Computing at Oswego is an organization that promotes the advancement of women in various technology fields. WiC is a member of the women's chapter of an international organization for computing, the Association for Computing Machinery (ACM-W).
          </p>
         </div>
-        <!-- Grid column -->
-  
-      </div>
-      <!-- Grid row-->
-      <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
-  
-      <!-- Grid row-->
-      <div class="row pb-3">
-  
-        <!-- Grid column -->
-        <div class="col-md-12">
-  
-          <div class="mb-5 flex-center">
+        <!-- Footer Links -->
 
-            <!--Linkedin -->
-            <a class="li-ic social-icons" href="">
-              <i class="fab fa-linkedin-in fa-4x white-text mr-5"> </i>
-            </a>
-            <!--Instagram-->
-            <a class="ins-ic social-icons" href="https://www.instagram.com/wicoswego/" target="_blank">
-              <i class="fab fa-instagram fa-4x white-text mr-5"> </i>
-            </a>
-             <!-- Mail -->
-             <a class="social-icons" href = "mailto:kchan2@oswego.edu"> 
-                <i class="far fa-envelope fa-4x white-text"> </i>
-             </a>
-
-          </div>
-  
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2022 Copyright:
+            <a href="https://mdbootstrap.com/"> Women in Computing at Oswego </a>
         </div>
-        <!-- Grid column -->
-  
-      </div>
-      <!-- Grid row-->
-  
-    </div>
-    <!-- Footer Links -->
-  
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2022 Copyright:
-      <a href="https://mdbootstrap.com/"> Women in Computing at Oswego </a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
+        <!-- Copyright -->
+
+    </footer>
     <!-- FOOTER ENDS -->
 </body>
+
 </html>
