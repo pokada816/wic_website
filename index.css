@@ -1,0 +1,130 @@
+/* Header */
+/* FontAwesome for working BootSnippet :> */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #eee !important;
+}
+
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.social-link:hover, .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+}
+
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+  header {
+    background: url('http://www.kodhus.com/freecourse-images/header-image.jpg');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 130px;
+    line-height: 60px;
+  }
+
+  header h1 {
+    font-family: 'Oswald', sans-serif;
+    padding: 10px;
+    font-size: 120px;
+    letter-spacing: 10px;
+  }
+
+  .btn {
+    margin: 50px 0px;
+    font-size: 20px;
+  }
+
+  h6 {
+    background-color: darkgrey;
+    width: 80px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: opensans;
+    margin-top: 50px;
+    border-radius: 5px;
+  }
+
+  /* body  */
+
+  body {
+    font: 75% georgia, sans-serif;
+    line-height: 1.88889;
+    color: #555753;
+    margin: auto;
+  }
+
+  body {
+   font-family: 'Cardo', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+   font-family: 'Oswald', sans-serif;
+   text-transform: uppercase;
+  }
+
+  #main {
+    margin: 50px;
+    text-align: center;
+    background-size: cover;
+    font-size: 120%;
+  }
+
+  .mission {
+    border-top: solid;
+    padding: 40px 0px 0px 0px;
+  }
+
+  .title {
+    padding: 40px;
+    font-size: 18px;
+  }
+
+  .mission-text {
+    margin: 40px auto;
+  }
+
+
+ 
+
+
+
+  .col-md-4 {
+    margin: 15px auto;
+  }
+
+  .container {
+    padding: 30px;
+    border-bottom: solid;
+    font-size: 18px;
+  }
+
+  .calendar {
+    text-align: center;
+    position: relative;
+    left: -16px;
+  }
